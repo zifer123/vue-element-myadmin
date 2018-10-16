@@ -1,11 +1,12 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-// 温馨提示， 为了打包让文件体积更小， 采用了cdn方式加载
+// 温馨提示， 为了打包让文件体积更小， 采用了cdn方式加载， 判断是否使用Vue.use
 import Vue from 'vue'
 import App from './App'
 import Element from 'element-ui'
 import i18n from './lang'
 import router from './router'
+import store from './store'
 
 Vue.config.productionTip = false
 
@@ -24,6 +25,7 @@ new Vue({
   el: '#app',
   router,
   i18n,
+  store,
   components: { App },
   template: '<App/>'
 })

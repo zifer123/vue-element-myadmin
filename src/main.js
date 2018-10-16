@@ -11,11 +11,14 @@ Vue.config.productionTip = false
 
 if (process.env.NODE_ENV === 'development') {
   require('element-ui/lib/theme-chalk/index.css')
+  Vue.use(Element, {
+    i18n: (key, value) => i18n.t(key, value)
+  })
+} else {
+  // 生成环境
+  Element.i18n((key, value) => i18n.t(key, value))
 }
 
-Vue.use(Element, {
-  i18n: (key, value) => i18n.t(key, value)
-})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

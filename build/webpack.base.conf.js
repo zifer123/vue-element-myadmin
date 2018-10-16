@@ -38,16 +38,6 @@ module.exports = {
       '@': resolve('src'),
     }
   },
-  externals: {
-    'vue': 'Vue',
-    'vue-router': 'VueRouter',
-    'vue-i18n': 'VueI18n',
-    'axios': 'Axios',
-    'element-ui': 'ELEMENT',
-    'element-ui/lib/locale/lang/en': 'ELEMENT.lang.en', // element-ui英文语言包
-    'element-ui/lib/locale/lang/zh-CN': 'ELEMENT.lang.zhCN', // element-ui中文语言包
-    'vuex': 'Vuex'
-  },
   module: {
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),
